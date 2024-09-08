@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cloud Engineer Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        /* General Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: #f4f4f9;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        header {
+            background: linear-gradient(45deg, #1f78d1, #6a00f4, #ff4081);
+            background-size: 400% 400%;
+            color: white;
+            padding: 60px 0;
+            text-align: center;
+            animation: gradient 8s ease infinite;
+            position: relative;
+            z-index: 1;
+        }
+
+        /* Dynamic Background Animation */
+        @keyframes gradient {
+            0% {
+                background-position: 0% 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+        header h1 {
+            font-size: 3rem;
+            margin-bottom: 10px;
+            font-weight: 700;
+            background: linear-gradient(135deg, #f4f4f9, #1f78d1);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-size: 200% 200%;
+            animation: textAnimation 5s linear infinite;
+        }
+
+        @keyframes textAnimation {
+            0% { background-position: 0% 0%; }
+            50% { background-position: 100% 100%; }
+            100% { background-position: 0% 0%; }
+        }
+
+        header p {
+            font-size: 1.2rem;
+        }
+
+        section {
+            padding: 40px 20px;
+            max-width: 1000px;
+            margin: auto;
+            text-align: center;
+        }
+
+        h2 {
+            color: #1f78d1;
+            margin-bottom: 20px;
+            font-size: 2rem;
+            font-weight: 700;
+            position: relative;
+        }
+
+        h2:after {
+            content: '';
+            width: 80px;
+            height: 4px;
+            background-color: #1f78d1;
+            display: block;
+            margin: 10px auto;
+        }
+
+        .skills-list {
+            list-style-type: none;
+            padding: 0;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+            position: relative;
+        }
+
+        .skills-list li {
+            background-color: white;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            width: 300px;
+            border-radius: 10px;
+            font-size: 1.1rem;
+            position: relative;
+            text-align: center;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+
+        .skills-list li:hover {
+            transform: translateY(-10px);
+        }
+
+        .description-section {
+            display: none;
+            background-color: #06305a;
+            color: white;
+            padding: 10px;
+            border-radius: 5px;
+            transition: opacity 0.3s ease, visibility 0.3s ease;
+            position: absolute;
+            width: 300px;
+            top: 110%; /* Position below the skill */
+            left: 50%;
+            transform: translateX(-50%);
+            opacity: 0;
+            visibility: hidden;
+            z-index: 10;
+        }
+
+        .skills-list li:hover .description-section {
+            display: block;
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .experience-list {
+            list-style-type: none;
+            padding: 0;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+
+        .experience-list li {
+            background-color: #e9f5ff;
+            border-left: 5px solid #072a4e;
+            padding: 20px;
+            width: 300px;
+            border-radius: 10px;
+            font-size: 1.1rem;
+            text-align: left;
+        }
+
+        .experience-list li h3 {
+            margin-bottom: 10px;
+            font-size: 1.3rem;
+            font-weight: 700;
+        }
+
+        .experience-list li p {
+            margin-bottom: 10px;
+        }
+
+        .contact-section {
+            background-color: #062e55;
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        a {
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        a:hover {
+            color: #f4f4f9;
+            text-decoration: underline;
+        }
+
+        /* Responsive Adjustments */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2rem;
+            }
+            .skills-list li, .experience-list li {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <h1>Ritushree Dutta</h1>
+        <p>Cloud Engineer | AWS | DevOps Enthusiast</p>
+    </header>
+
+    <!-- Skills Section -->
+    <section>
+        <h2>Skills</h2>
+        <ul class="skills-list">
+            <li>
+                Terraform
+                <div class="description-section">
+                    Deployed infrastructure as code using Terraform to automate cloud provisioning, scaling, and resource management across AWS.
+                </div>
+            </li>
+            <li>
+                Docker
+                <div class="description-section">
+                    Containerized applications using Docker, ensuring smooth CI/CD pipelines and reliable deployment across environments.
+                </div>
+            </li>
+            <li>
+                Cloud Migration
+                <div class="description-section">
+                    Containerized applications using Docker, ensuring smooth CI/CD pipelines and reliable deployment across environments.
+                </div>
+            </li>
+            <li>
+                Jenkins
+                <div class="description-section">
+                    Containerized applications using Docker, ensuring smooth CI/CD pipelines and reliable deployment across environments.
+                </div>
+            </li>
+            <li>
+                AWS
+                <div class="description-section">
+                    Managed and monitored AWS infrastructure with a focus on scalability, cost optimization, and security best practices.
+                </div>
+            </li>
+        </ul>
+    </section>
+
+    <!-- Experience Section -->
+    <section>
+        <h2>Projects</h2>
+        <ul class="experience-list">
+            <li>
+                <h3>Cloud Engineer at ABC Corp</h3>
+                <p>- Designed and implemented AWS infrastructure for scalable applications.</p>
+                <p>- Automated deployment pipelines using Terraform and Jenkins.</p>
+                <p>- Monitored and optimized AWS cloud services.</p>
+            </li>
+            <li>
+                <h3>DevOps Engineer at XYZ Inc</h3>
+                <p>- Streamlined CI/CD processes using Jenkins and Docker.</p>
+                <p>- Improved system uptime by managing high-availability solutions.</p>
+                <p>- Performed regular security audits and applied patches.</p>
+            </li>
+            <li>
+                <h3>Junior Developer at DEF Solutions</h3>
+                <p>- Assisted in the development of Java-based web applications.</p>
+                <p>- Collaborated with cross-functional teams to deliver features.</p>
+                <p>- Contributed to code reviews and testing automation.</p>
+            </li>
+        </ul>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact-section">
+        <h2>Contact Me</h2>
+        <p>Email: <a href="mailto:ritu.dutta1309@gmail.com">your.email@example.com</a></p>
+        <p>LinkedIn: <a href="https://www.linkedin.com/in/yourprofile" target="_blank">Your LinkedIn</a></p>
+    </section>
+
+</body>
+</html>
